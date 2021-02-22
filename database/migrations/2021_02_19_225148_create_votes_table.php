@@ -13,7 +13,7 @@ class CreateVotesTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable(‘votes’)) {
+        if (!Schema::hasTable('votes')) {
             Schema::create('votes', function (Blueprint $table) {
                 $table->id();
                 $table->integer('user_id');

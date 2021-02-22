@@ -13,7 +13,7 @@ class CreateElectionCandidatsTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable(‘election_candidats’)) {
+        if (!Schema::hasTable('election_candidats')) {
             Schema::create('election_candidats', function (Blueprint $table) {
                 $table->id();
                 $table->integer('election_id');

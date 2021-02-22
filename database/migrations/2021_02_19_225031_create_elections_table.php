@@ -14,7 +14,7 @@ class CreateElectionsTable extends Migration
 
     public function up()
     {
-        if (!Schema::hasTable(‘elections’)) {
+        if (!Schema::hasTable('elections')) {
             Schema::create('elections', function (Blueprint $table) {
                 $table->id();
                 $table->string('tittle');

@@ -14,7 +14,7 @@ class CreateCandidatsTable extends Migration
 
     public function up()
     {
-        if (!Schema::hasTable(‘candidats’)) {
+        if (!Schema::hasTable('candidats')) {
             Schema::create('candidats', function (Blueprint $table) {
                 $table->id();
                 $table->string('first_name');
