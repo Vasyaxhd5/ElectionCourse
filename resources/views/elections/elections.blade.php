@@ -39,7 +39,9 @@
                             @endif
                         </td>
                         <td>
+                            @if( Auth::user()  )
                             <a href="{{ route('election.show',$election->id)}}" class="btn btn-primary">View</a>
+                            @endif
                         </td>
                         <td>
                             @if( Auth::user() && (Auth::user()->hasRole('Admin') ) )

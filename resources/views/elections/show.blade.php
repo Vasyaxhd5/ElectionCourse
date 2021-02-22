@@ -5,6 +5,38 @@
     <div class="row">
         <div class="col-12">
             <h1 class="display-5">{{$election->tittle}}</h1>
+
+            @if ($message = Session::get('success'))
+                <div class="alert alert-success font-weight-bold alert-block">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>{{ $message }}</strong>
+                </div>
+            @endif
+            @if ($message = Session::get('exist'))
+                <div class="alert alert-primary font-weight-bold alert-block">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>{{ $message }}</strong>
+                </div>
+            @endif
+            @if ($message = Session::get('existInThisElection'))
+                <div class="alert alert-primary font-weight-bold alert-block">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>{{ $message }}</strong>
+                </div>
+            @endif
+            @if ($message = Session::get('notExist'))
+                <div class="alert alert-primary font-weight-bold alert-block">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>{{ $message }}</strong>
+                </div>
+            @endif
+            @if ($message = Session::get('alert'))
+                <div class="alert alert-danger font-weight-bold alert-block">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>{{ $message }}</strong>
+                </div>
+            @endif
+
             <div class="container">
                 <div class="row">
                     <div class="col col-5">
@@ -100,36 +132,6 @@
                         </div>
                         @endforeach
 
-                        @if ($message = Session::get('success'))
-                            <div class="alert alert-success font-weight-bold alert-block">
-                                <button type="button" class="close" data-dismiss="alert">×</button>
-                                <strong>{{ $message }}</strong>
-                            </div>
-                        @endif
-                            @if ($message = Session::get('exist'))
-                                <div class="alert alert-primary font-weight-bold alert-block">
-                                    <button type="button" class="close" data-dismiss="alert">×</button>
-                                    <strong>{{ $message }}</strong>
-                                </div>
-                            @endif
-                            @if ($message = Session::get('existInThisElection'))
-                                <div class="alert alert-primary font-weight-bold alert-block">
-                                    <button type="button" class="close" data-dismiss="alert">×</button>
-                                    <strong>{{ $message }}</strong>
-                                </div>
-                            @endif
-                            @if ($message = Session::get('notExist'))
-                                <div class="alert alert-primary font-weight-bold alert-block">
-                                    <button type="button" class="close" data-dismiss="alert">×</button>
-                                    <strong>{{ $message }}</strong>
-                                </div>
-                            @endif
-                            @if ($message = Session::get('alert'))
-                                <div class="alert alert-danger font-weight-bold alert-block">
-                                    <button type="button" class="close" data-dismiss="alert">×</button>
-                                    <strong>{{ $message }}</strong>
-                                </div>
-                            @endif
                 </div>
             </div>
             </div>
