@@ -134,6 +134,7 @@ class CandidateController extends Controller
     public function destroy($id)
     {
         $candidate = Candidats::find($id);
+        Storage::delete($candidate->filename);
         $candidate->delete();
 
         return redirect('/candidate')->with('success', 'Candidate deleted!');

@@ -14,17 +14,18 @@ class CreateCandidatsTable extends Migration
 
     public function up()
     {
-        Schema::create('candidats', function (Blueprint $table) {
-            $table->id();
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->date('birthday');
-            $table->string('filename');
-            $table->string('biography');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable(‘candidats’)) {
+            Schema::create('candidats', function (Blueprint $table) {
+                $table->id();
+                $table->string('first_name');
+                $table->string('last_name');
+                $table->date('birthday');
+                $table->string('filename');
+                $table->string('biography');
+                $table->timestamps();
+            });
+        }
     }
-
     /**
      * Reverse the migrations.
      *

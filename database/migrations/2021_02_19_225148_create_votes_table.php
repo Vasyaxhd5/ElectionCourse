@@ -13,13 +13,15 @@ class CreateVotesTable extends Migration
      */
     public function up()
     {
-        Schema::create('votes', function (Blueprint $table) {
-            $table->id();
-            $table->integer('user_id');
-            $table->integer('candidate_id');
-            $table->integer('election_id');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable(‘votes’)) {
+            Schema::create('votes', function (Blueprint $table) {
+                $table->id();
+                $table->integer('user_id');
+                $table->integer('candidate_id');
+                $table->integer('election_id');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

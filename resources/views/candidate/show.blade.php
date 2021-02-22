@@ -8,19 +8,19 @@
                 <div class="row">
                     <div class="col col-4">
                         <div class="row">
-                            <div class="col-12">ID:</div>
+                            <div class="col-12" style="font-weight: 700;">ID:</div>
                         </div>
                         <div class="row">
-                            <div class="col-12">FirstName:</div>
+                            <div class="col-12" style="font-weight: 700;">FirstName:</div>
                         </div>
                         <div class="row">
-                            <div class="col-12">LastName:</div>
+                            <div class="col-12" style="font-weight: 700;">LastName:</div>
                         </div>
                         <div class="row">
-                            <div class="col-12">Birthday:</div>
+                            <div class="col-12" style="font-weight: 700;">Birthday:</div>
                         </div>
                         <div class="row">
-                            <div class="col-12">Biography:</div>
+                            <div class="col-12" style="font-weight: 700;">Biography:</div>
                         </div>
                     </div>
                     <div class="col col-4">

@@ -13,12 +13,14 @@ class CreateElectionCandidatsTable extends Migration
      */
     public function up()
     {
-        Schema::create('election_candidats', function (Blueprint $table) {
-            $table->id();
-            $table->integer('election_id');
-            $table->integer('candidate_id');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable(‘election_candidats’)) {
+            Schema::create('election_candidats', function (Blueprint $table) {
+                $table->id();
+                $table->integer('election_id');
+                $table->integer('candidate_id');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

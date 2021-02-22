@@ -14,13 +14,15 @@ class CreateElectionsTable extends Migration
 
     public function up()
     {
-        Schema::create('elections', function (Blueprint $table) {
-            $table->id();
-            $table->string('tittle');
-            $table->dateTime('start_dt');
-            $table->dateTime('finish_dt');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable(‘elections’)) {
+            Schema::create('elections', function (Blueprint $table) {
+                $table->id();
+                $table->string('tittle');
+                $table->dateTime('start_dt');
+                $table->dateTime('finish_dt');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

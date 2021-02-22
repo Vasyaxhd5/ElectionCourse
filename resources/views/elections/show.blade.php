@@ -4,21 +4,21 @@
 
     <div class="row">
         <div class="col-12">
-            <h1 class="display-3">Elections</h1>
+            <h1 class="display-5">{{$election->tittle}}</h1>
             <div class="container">
                 <div class="row">
                     <div class="col col-5">
                         <div class="row">
-                            <div class="col-12">ID:</div>
+                            <div class="col-12" style="font-weight: 700;">ID:</div>
                         </div>
                         <div class="row">
-                            <div class="col-12">Title:</div>
+                            <div class="col-12" style="font-weight: 700;">Title:</div>
                         </div>
                         <div class="row">
-                            <div class="col-12">Start Date:</div>
+                            <div class="col-12" style="font-weight: 700;">Start Date:</div>
                         </div>
                         <div class="row">
-                            <div class="col-12">Finish Date:</div>
+                            <div class="col-12" style="font-weight: 700;">Finish Date:</div>
                         </div>
                     </div>
                     <div class="col col-5">
