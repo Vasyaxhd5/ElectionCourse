@@ -24,7 +24,6 @@ class Elections extends Model
             ->where(  'start_dt', '=', $start_dt)
             ->where(  'finish_dt', '=', $finish_dt)
             ->select('id')->first();
-
     }
 
     public static function checkActivity($start_dt,$finish_dt ) {

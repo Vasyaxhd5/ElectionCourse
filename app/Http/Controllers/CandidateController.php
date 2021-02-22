@@ -59,8 +59,6 @@ class CandidateController extends Controller
             'birthday' => $request->get('birthday'),
             'filename' => $newFileName,
             'biography' => $request->get('biography'),
-
-
         ]);
         $candidate->save();
 
@@ -102,11 +100,6 @@ class CandidateController extends Controller
      */
     public function update(Request $request, $id)
     {
-
-
-
-
-     //  dd($request->get('filename'));
         $request->validate([
             'first_name' => 'required|min:2',
             'last_name' => 'required|min:2',
@@ -119,9 +112,7 @@ class CandidateController extends Controller
         Storage::delete($candidate->filename);
 
         $file = $request->file('filename');
-
         $newFileName = Storage::putFile('public', new File($file->getPathname()));
-
 
         $candidate->first_name = $request->get('first_name');
         $candidate->last_name = $request->get('last_name');

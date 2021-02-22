@@ -49,33 +49,7 @@
                                 <img src="{{$fileLink}}" height="150" width="200">
                             </div>
                         </div>
-
                     </div>
-{{--            <table class="table table-striped">--}}
-{{--                <thead>--}}
-{{--                    <tr>--}}
-{{--                        <td>ID</td>--}}
-{{--                        <td>FirstName</td>--}}
-{{--                        <td>LastName</td>--}}
-{{--                        <td>Birthday</td>--}}
-{{--                        <td>Biography</td>--}}
-
-{{--                    </tr>--}}
-{{--                </thead>--}}
-{{--                <tbody id="table_candidate">--}}
-
-{{--                    <tr>--}}
-{{--                        <td>{{$candidate->id}}</td>--}}
-{{--                        <td>{{$candidate->first_name}}</td>--}}
-{{--                        <td>{{$candidate->last_name}}</td>--}}
-{{--                        <td>{{$candidate->birthday}}</td>--}}
-{{--                        <td>{{$candidate->biography}}</td>--}}
-
-{{--                    </tr>--}}
-
-{{--                </tbody>--}}
-{{--            </table>--}}
-
 
             <a href="{{ route('candidate.index')}}" class="btn btn-primary">Back to candidates</a>
             <div>
