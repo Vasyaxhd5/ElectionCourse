@@ -12,7 +12,7 @@
                             <div class="col-12">ID:</div>
                         </div>
                         <div class="row">
-                            <div class="col-12">Tittle:</div>
+                            <div class="col-12">Title:</div>
                         </div>
                         <div class="row">
                             <div class="col-12">Start Date:</div>
