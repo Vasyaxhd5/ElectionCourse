@@ -31,6 +31,7 @@ class ElectionController extends Controller
     public function create()
     {
         $candidates = Candidats::all();
+
         return view('elections.create', compact('candidates'));
     }
 
@@ -78,6 +79,7 @@ class ElectionController extends Controller
         $election =Elections::find($id);
         $isActive = Elections::checkActivity($election->start_dt, $election->finish_dt);
         $candidates = Candidats::getByElectionId($id);
+
         return view('elections.show', compact('election', 'candidates', 'isActive'));
     }
 
@@ -124,6 +126,7 @@ class ElectionController extends Controller
             ]);
             $electionCandidate->save();
         }
+
         return redirect('/election')->with('success', 'Election saved!');
     }
 
